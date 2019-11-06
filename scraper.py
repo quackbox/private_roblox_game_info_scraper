@@ -1,5 +1,4 @@
 import requests
-import sys
 
 def write_to_file(userId, content):
     with open(str(userId), "w") as write_to:
