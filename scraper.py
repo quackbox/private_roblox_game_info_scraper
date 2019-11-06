@@ -23,6 +23,6 @@ def scrape_user(userId):
     else:
         print("user banned!")
 
-for i in range(100):
+for i in range(100): # userId range (E.g. 30 million).
     print("userId: " + str(i))
     scrape_user(i)
