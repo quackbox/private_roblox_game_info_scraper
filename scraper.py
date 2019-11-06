@@ -17,6 +17,20 @@ def scrape_user(userId):
     }
 
     response = requests.get("https://friends.roblox.com/v1/users/" + str(userId) + "/friends/online", headers=headers)
+	
+    #{
+    #  "userPresence": {
+    #    "UserPresenceType": "{website,game,studio,etc}",
+    #    "lastLocation": "{lastlocationname}",
+    #    "placeId": {placeid},
+    #    "rootPlaceId": {rootplaceid},
+    #    "gameInstanceId": "{gameinstance}",
+    #    "universeId": {universeid},
+    #    "lastOnline": "{timestamp}"
+    #  },
+    #  "id": {userid},
+    #  "name": "{username}"
+    #},
 
     if response.status_code == 200:
         write_to_file(userId, response.content)
